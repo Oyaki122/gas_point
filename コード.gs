@@ -6,28 +6,23 @@ function doGet(e) {
 }
 
 function getData(alg) {
-if(alg=="total1") {
-return sheet.getRange(47,2).getValues();
-}
-else if(alg=="total2") {
-return sheet.getRange(48,2).getValues();
-}
-else if(alg=="male1") {
-return sheet.getRange(47,3).getValues();
-}
-else if(alg=="male2") {
-return sheet.getRange(48,3).getValues();
-}
-else if(alg=="female1") {
-return sheet.getRange(47,4).getValues();
-}
-else if(alg=="female2") {
-return sheet.getRange(48,4).getValues();
-}
-else if(alg=="other1") {
-return sheet.getRange(47,5).getValues();
-}
-else if(alg=="other2") {
-return sheet.getRange(48,5).getValues();
-}
+  var rowdata=[];
+  
+ rowdata[0]=sheet.getRange(47,2).getValues();
+
+ rowdata[1]=sheet.getRange(48,2).getValues();
+
+ rowdata[2]=sheet.getRange(47,3).getValues();
+
+ rowdata[3]=sheet.getRange(48,3).getValues();
+
+ rowdata[4]=sheet.getRange(47,4).getValues();
+  
+ rowdata[5]=sheet.getRange(48,4).getValues();
+
+ rowdata[6]=sheet.getRange(47,5).getValues();
+
+ rowdata[7]=sheet.getRange(48,5).getValues();
+  return rowdata;
+
 }
